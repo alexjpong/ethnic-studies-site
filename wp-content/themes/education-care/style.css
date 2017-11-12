@@ -3191,6 +3191,9 @@ li {
 #bredcrum-section {
     float: left;
     width: 100%;
+    padding: 50px 0px;
+    background: url("../img/header-image-books.jpg") top center no-repeat;
+    background-size: cover;
 }
 
 .inner .site-header {
@@ -3201,10 +3204,6 @@ li {
 .inner .main-navigation ul li a,
 .inner .search-holder a {
     color: #434343;
-}
-
-#bredcrum-section {
-    padding: 50px 0px;
 }
 
 .page-title,

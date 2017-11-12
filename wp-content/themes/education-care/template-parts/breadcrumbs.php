@@ -14,18 +14,7 @@ if ( ! function_exists( 'breadcrumb_trail' ) ) {
 	require_once trailingslashit( get_template_directory() ) . 'inc/breadcrumbs.php';
 }
 
-// Custom image.
-$header_background_image = 'assets/img/header-image-books.jpg';
-
-if( !empty( $header_background_image ) ){
-	$breadcrumbs_style = 'style="background: url('.esc_url( $header_background_image ).') top center no-repeat; background-size: cover;"';
-} else{
-
-	$breadcrumbs_style = '';
-}
-?>
-
-<div id="bredcrum-section" class="overlay-area" <?php echo $breadcrumbs_style; ?>>
+<div id="bredcrum-section" class="overlay-area">
 
     <div class="container">
 
