@@ -1,287 +1,264 @@
 <?php
 /**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Education_Care
- */
+* The header for our theme
+*
+* This is the template that displays all of the <head> section and everything up until <div id="content">
+*
+* @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+*
+* @package Education_Care
+*/
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta charset="utf-8">
-<meta name="format-detection" content="telephone=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+  <div id="page" class="site">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="top-header">
-		    <div class="container">
-		        <div class="top-header-content">
-		              <div class="top-info-left left">
-		                  
-		                  	<?php 
-		                  	$top_left = education_care_options( 'top_left' );
+    <header id="masthead" class="site-header" role="banner">
+      <div class="top-header">
+        <div class="container">
+          <div class="top-header-content">
+            <div class="top-info-left left">
 
-		                  	if( 'contact_details' == $top_left ){ ?>
+              <?php
+              $top_left = education_care_options( 'top_left' );
 
-		                  		<div class="top-contact-info">
+              if( 'contact_details' == $top_left ){ ?>
 
-			                  		<?php 
-			                  		$contact_address = education_care_options('conatct_address');
-			                  		if( !empty( $contact_address ) ){ ?>
-			                  			<span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo esc_html( $contact_address ); ?></span>
-			                  		<?php } ?>
+                <div class="top-contact-info">
 
-			                  		<?php 
-			                  		$conatct_email = education_care_options('conatct_email');
-			                  		if( !empty( $conatct_email ) ){ ?>
-			                  			<span class="email"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> <?php echo esc_html( $conatct_email ); ?></span>
-			                  		<?php } ?>
+                  <?php
+                  $contact_address = education_care_options('conatct_address');
+                  if( !empty( $contact_address ) ){ ?>
+                    <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo esc_html( $contact_address ); ?></span>
+                  <?php } ?>
 
-			                  		<?php 
-			                  		$conatct_phone = education_care_options('conatct_phone');
-			                  		if( !empty( $conatct_phone ) ){ ?>
-			                  			<span class="phone"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo esc_html( $conatct_phone ); ?></span>
-			                  		<?php } ?>
+                  <?php
+                  $conatct_email = education_care_options('conatct_email');
+                  if( !empty( $conatct_email ) ){ ?>
+                    <span class="email"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> <?php echo esc_html( $conatct_email ); ?></span>
+                  <?php } ?>
 
-			                  	</div><!-- .top-contact-info -->
+                  <?php
+                  $conatct_phone = education_care_options('conatct_phone');
+                  if( !empty( $conatct_phone ) ){ ?>
+                    <span class="phone"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo esc_html( $conatct_phone ); ?></span>
+                  <?php } ?>
 
-		                  	<?php
+                </div><!-- .top-contact-info -->
 
-		                  	} elseif ( 'notice' == $top_left ) {
+                <?php
 
-		                  		get_template_part( 'template-parts/notices' );
-		                  		
-		                  	} ?>
+              } elseif ( 'notice' == $top_left ) {
 
-		                  
-		              </div><!-- .top-info-left -->
+                get_template_part( 'template-parts/notices' );
 
-		              <div class="top-info-right right">
-		              	<?php 
-		              	$top_right = education_care_options( 'top_right' );
+              } ?>
 
-		              	if( 'contact_details' == $top_right ){ ?>
 
-	                  		<div class="top-contact-info">
+            </div><!-- .top-info-left -->
 
-		                  		<?php 
-		                  		$contact_address = education_care_options('conatct_address');
-		                  		if( !empty( $contact_address ) ){ ?>
-		                  			<span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo esc_html( $contact_address ); ?></span>
-		                  		<?php } ?>
+            <div class="top-info-right right">
+              <?php
+              $top_right = education_care_options( 'top_right' );
 
-		                  		<?php 
-		                  		$conatct_email = education_care_options('conatct_email');
-		                  		if( !empty( $conatct_email ) ){ ?>
-		                  			<span class="email"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> <?php echo esc_html( $conatct_email ); ?></span>
-		                  		<?php } ?>
+              if( 'contact_details' == $top_right ){ ?>
 
-		                  		<?php 
-		                  		$conatct_phone = education_care_options('conatct_phone');
-		                  		if( !empty( $conatct_phone ) ){ ?>
-		                  			<span class="phone"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo esc_html( $conatct_phone ); ?></span>
-		                  		<?php } ?>
+                <div class="top-contact-info">
 
-		                  	</div><!-- .top-contact-info -->
+                  <?php
+                  $contact_address = education_care_options('conatct_address');
+                  if( !empty( $contact_address ) ){ ?>
+                    <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo esc_html( $contact_address ); ?></span>
+                  <?php } ?>
 
-		              	<?php
+                  <?php
+                  $conatct_email = education_care_options('conatct_email');
+                  if( !empty( $conatct_email ) ){ ?>
+                    <span class="email"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> <?php echo esc_html( $conatct_email ); ?></span>
+                  <?php } ?>
+                  
+                  <?php
+                  $conatct_phone = education_care_options('conatct_phone');
+                  if( !empty( $conatct_phone ) ){ ?>
+                    <span class="phone"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo esc_html( $conatct_phone ); ?></span>
+                  <?php } ?>
 
-		              	} elseif ( 'notice' == $top_right ) {
+                </div><!-- .top-contact-info -->
 
-		              		get_template_part( 'template-parts/notices' );
-		              		
-		              	} elseif ( 'social_links' == $top_right ) { ?>
+                <?php
 
-		              		<div class="social-widgets">
-		              		    <ul>
-		              		      <?php 
-					                for( $j= 1; $j<=6; $j++ ){ 
+              } elseif ( 'notice' == $top_right ) {
 
-					                	$social_link = education_care_options('social_link_'.$j);
+                get_template_part( 'template-parts/notices' );
 
-					                	if( !empty( $social_link ) ){ ?>
+              } elseif ( 'social_links' == $top_right ) { ?>
 
-					                  		<li><a target="_blank" href="<?php echo esc_url( $social_link ); ?>"><?php echo esc_url($social_link); ?></a></li>
+                <div class="social-widgets">
+                  <ul>
+                    <?php
+                    for( $j= 1; $j<=6; $j++ ){
 
-					                	<?php 
-					                	} 
+                      $social_link = education_care_options('social_link_'.$j);
 
-					                } ?>
-		              		    </ul> 
-		              		</div><!-- .social-widgets -->
+                      if( !empty( $social_link ) ){ ?>
 
-		              		<?php
-		              		
-		              	} elseif ( 'mixed' == $top_right ) {
+                        <li><a target="_blank" href="<?php echo esc_url( $social_link ); ?>"><?php echo esc_url($social_link); ?></a></li>
 
-		              		$contact_address = education_care_options('conatct_address');
-	                  		if( !empty( $contact_address ) ){ ?>
-	                  			<span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo esc_html( $contact_address ); ?></span>
-	                  		<?php } ?>
+                        <?php
+                      }
 
-		              		<?php 
-		              		$conatct_email = education_care_options('conatct_email');
-		              		if( !empty( $conatct_email ) ){ ?>
-		              			<span class="email"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> <?php echo esc_html( $conatct_email ); ?></span>
-		              		<?php } ?>
+                    } ?>
+                  </ul>
+                </div><!-- .social-widgets -->
 
-		              		<?php 
-	                  		$conatct_phone = education_care_options('conatct_phone');
-	                  		if( !empty( $conatct_phone ) ){ ?>
-	                  			<span class="phone"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo esc_html( $conatct_phone ); ?></span>
-	                  		<?php } ?>
+                <?php
 
-  		              		<div class="social-widgets">
-  		              		    <ul>
-  		              		      <?php 
-  					                for( $j= 1; $j<=6; $j++ ){ 
+              } elseif ( 'mixed' == $top_right ) {
 
-  					                	$social_link = education_care_options('social_link_'.$j);
+                $contact_address = education_care_options('conatct_address');
+                if( !empty( $contact_address ) ){ ?>
+                  <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo esc_html( $contact_address ); ?></span>
+                <?php } ?>
 
-  					                	if( !empty( $social_link ) ){ ?>
+                <?php
+                $conatct_email = education_care_options('conatct_email');
+                if( !empty( $conatct_email ) ){ ?>
+                  <span class="email"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> <?php echo esc_html( $conatct_email ); ?></span>
+                <?php } ?>
 
-  					                  		<li><a target="_blank" href="<?php echo esc_url( $social_link ); ?>"><?php echo esc_url($social_link); ?></a></li>
+                <?php
+                $conatct_phone = education_care_options('conatct_phone');
+                if( !empty( $conatct_phone ) ){ ?>
+                  <span class="phone"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo esc_html( $conatct_phone ); ?></span>
+                <?php } ?>
 
-  					                	<?php 
-  					                	} 
+                <div class="social-widgets">
+                  <ul>
+                    <?php
+                    for( $j= 1; $j<=6; $j++ ){
 
-  					                } ?>
-  		              		    </ul> 
-  		              		</div><!-- .social-widgets -->
+                      $social_link = education_care_options('social_link_'.$j);
 
-		              	<?php
-		              		
-		              	} 
-		              	?>
-		                  
-		              </div><!-- .top-info-right -->
-		        </div><!-- .top-header-content -->   
-		    </div>
-		</div><!-- .top-header -->
+                      if( !empty( $social_link ) ){ ?>
 
-		<div class="bottom-header">
-		    <div class="container">
-		        <div class="site-main-header">
-		               <div class="site-branding">
-		                  	<?php 
+                        <li><a target="_blank" href="<?php echo esc_url( $social_link ); ?>"><?php echo esc_url($social_link); ?></a></li>
 
-		                  	$logo_type = education_care_options( 'logo_type' );
+                        <?php
+                      }
 
-		                  	if( 'logo-only' == $logo_type ){
+                    } ?>
+                  </ul>
+                </div><!-- .social-widgets -->
 
-		                  		education_care_logo();
+                <?php
 
-		                  	} elseif( 'title-desc' == $logo_type  ){ ?>
+              }
+              ?>
 
-								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-								<?php
-								$description = get_bloginfo( 'description', 'display' );
-								if ( $description || is_customize_preview() ) : ?>
-									<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-									<?php
-								endif; 
+            </div><!-- .top-info-right -->
+          </div><!-- .top-header-content -->
+        </div>
+      </div><!-- .top-header -->
 
-		                  	} elseif( 'logo-title-desc' == $logo_type  ){
+      <div class="bottom-header">
+        <div class="container">
+          <div class="site-main-header">
+            <div class="site-branding">
+              <?php
 
-      		                  	education_care_logo(); ?>
-      		                  	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-      							<?php
-      							$description = get_bloginfo( 'description', 'display' );
-      							if ( $description || is_customize_preview() ) : ?>
-      								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-      								<?php
-      							endif; 
-		                  		
-		                  	}elseif( 'logo-title' == $logo_type  ){
+              $logo_type = education_care_options( 'logo_type' );
 
-      		                  	education_care_logo(); ?>
-      		                  	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-      							<?php
+              if( 'logo-only' == $logo_type ){
 
-		                  	}elseif( 'logo-desc' == $logo_type  ){
+                education_care_logo();
 
-      		                  	education_care_logo(); 
-      		                  	
-      							$description = get_bloginfo( 'description', 'display' );
+              } elseif( 'title-desc' == $logo_type  ){ ?>
 
-      							if ( $description || is_customize_preview() ) : ?>
-      								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-      							<?php
-      							endif;
-		                  		
-		                  	} ?>
-		               </div>
-		               <!-- .site-branding -->
+                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <?php
+                $description = get_bloginfo( 'description', 'display' );
+                if ( $description || is_customize_preview() ) : ?>
+                <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+                <?php
+              endif;
 
-		                <div class="main-navigation-wrapper">
-		                   <div id="main-nav" class="clear-fix">
-		                    	<nav id="site-navigation" class="main-navigation" role="navigation">
-									<div class="wrap-menu-content">
-										<?php
-										wp_nav_menu(
-											array(
-												'theme_location' => 'primary',
-												'menu_id'        => 'primary-menu',
-												'fallback_cb'    => 'education_care_fallback_menu',
-											)
-										);
-										?>
-									</div><!-- .menu-content -->
-		                      	</nav><!-- #site-navigation -->
-		                	</div><!-- #main-nav -->
+            } elseif( 'logo-title-desc' == $logo_type  ){
 
-		                   	<?php 
-		                   	$header_search = education_care_options( 'header_search' ); 
-		                   	if( 1 == $header_search ){ ?>
-			                   <div class="search-holder">
-			                      <a href="#" class="education-search" data-popup-open="popup">
-			                              <i class="fa fa-search" aria-hidden="true"></i>
-			                      </a><!-- .education-search -->
-			                   </div><!-- .search-holder -->
-			                <?php } ?>
-		              </div>
-		        </div><!-- site-main-header -->
-		    </div>
-		</div><!-- .bottom-header -->
+              education_care_logo(); ?>
+              <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+              <?php
+              $description = get_bloginfo( 'description', 'display' );
+              if ( $description || is_customize_preview() ) : ?>
+              <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+              <?php
+            endif;
 
-		<div class="popup" data-popup="popup">
-		  <div class="popup-inner">
-		      <div class="education-search-container">
-		          <div class="education-search-form">
-		              <?php get_search_form(); ?>
-		              <a href="#" class="popup-close" data-popup-close="popup"><i class="fa fa-times" aria-hidden="true"></i></a>
-		          </div><!-- education-search-form -->                       
-		       </div><!-- .education-search-containe -->
-		  </div>
-		</div>
-	</header><!-- #masthead -->
+          }elseif( 'logo-title' == $logo_type  ){
 
-	<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+            education_care_logo(); ?>
+            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+            <?php
 
-	<div id="content" class="site-content">
+          }elseif( 'logo-desc' == $logo_type  ){
 
-		<?php get_template_part( 'template-parts/slider' ); ?>
+            education_care_logo();
 
-		<?php get_template_part( 'template-parts/home-content' ); ?>
+            $description = get_bloginfo( 'description', 'display' );
 
-		<div class="container">
+            if ( $description || is_customize_preview() ) : ?>
+            <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+            <?php
+          endif;
 
-            <div class="inner-wrapper">
+        } ?>
+      </div>
+      <!-- .site-branding -->
 
-            	<div class="custom-wrapper">
+      <div class="main-navigation-wrapper">
+        <div id="main-nav" class="clear-fix">
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div class="wrap-menu-content">
+              <?php
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'primary',
+                  'menu_id'        => 'primary-menu',
+                  'fallback_cb'    => 'education_care_fallback_menu',
+                )
+              );
+              ?>
+            </div><!-- .menu-content -->
+          </nav><!-- #site-navigation -->
+        </div><!-- #main-nav -->
+      </div>
+    </div><!-- site-main-header -->
+  </div>
+</div><!-- .bottom-header -->
+</header><!-- #masthead -->
 
-				
+<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+
+<div id="content" class="site-content">
+
+  <?php get_template_part( 'template-parts/slider' ); ?>
+
+  <?php get_template_part( 'template-parts/home-content' ); ?>
+
+  <div class="container">
+
+    <div class="inner-wrapper">
+
+      <div class="custom-wrapper">
