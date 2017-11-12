@@ -2026,7 +2026,8 @@ li {
 }
 
 .main-navigation ul li.current-menu-item  a {
-    border-top: 2px solid rgba(165,28,48,1);
+    padding-bottom: 0;
+    border-bottom: 2px solid rgba(165,28,48,1);
 }
 
 .main-navigation ul li ul {
@@ -4003,7 +4004,7 @@ blockquote p {
 }
 
 .mean-container .main-navigation ul li.current-menu-item  a {
-	border-top:0px;
+	border-top: 0px;
 }
 
 /*--------------------------------------------------------------
