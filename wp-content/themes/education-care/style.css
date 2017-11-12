@@ -3192,7 +3192,7 @@ li {
     float: left;
     width: 100%;
     padding: 50px 0px;
-    background: url("../img/header-image-books.jpg") top center no-repeat;
+    background: url("./assets/img/header-image-books.jpg") top center no-repeat;
     background-size: cover;
 }
 
