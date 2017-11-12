@@ -15,10 +15,10 @@ if ( ! function_exists( 'breadcrumb_trail' ) ) {
 }
 
 // Custom image.
-$image_url = get_header_image();
+$header_background_image = 'assets/img/header-image-books.jpg';
 
 if( !empty( $image_url ) ){
-	$breadcrumbs_style = 'style="background: url('.esc_url( $image_url ).') top center no-repeat; background-size: cover;"';
+	$breadcrumbs_style = 'style="background: url('.esc_url( $header_background_image ).') top center no-repeat; background-size: cover;"';
 } else{
 
 	$breadcrumbs_style = '';
@@ -31,7 +31,7 @@ if( !empty( $image_url ) ){
 
         <div class="page-title">
 
-        	<?php 
+        	<?php
         	if(is_page() || is_single() ){ ?>
         		<h2>
         			<?php echo esc_html( get_the_title() ); ?>
