@@ -17,7 +17,7 @@ if ( ! function_exists( 'breadcrumb_trail' ) ) {
 // Custom image.
 $header_background_image = 'assets/img/header-image-books.jpg';
 
-if( !empty( $image_url ) ){
+if( !empty( $header_background_image ) ){
 	$breadcrumbs_style = 'style="background: url('.esc_url( $header_background_image ).') top center no-repeat; background-size: cover;"';
 } else{
 
