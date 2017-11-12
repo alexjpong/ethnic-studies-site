@@ -14,6 +14,8 @@ if ( ! function_exists( 'breadcrumb_trail' ) ) {
 	require_once trailingslashit( get_template_directory() ) . 'inc/breadcrumbs.php';
 }
 
+?>
+
 <div id="bredcrum-section" class="overlay-area">
 
     <div class="container">
